@@ -6,7 +6,7 @@ const { Products, Categories, Users } = require("../db");
 exports.shoes = async (req, res) => {
   try {
     console.log("Creating Shoes");
-    for (const shoe of Zapatos) {
+    Zapatos.map(async (shoe) => {
       let categoryInstance = await Categories.findOne({
         where: { name: shoe.category },
       });
@@ -27,14 +27,13 @@ exports.shoes = async (req, res) => {
         CategoryId: categoryInstance.id,
         UserId: userInstance.id,
       });
-    }
+    });
 
     console.log("Shoes saved in DB");
   } catch (error) {
     console.log(error.message);
   }
 };
-
 
 exports.categories = async (req, res) => {
   try {
