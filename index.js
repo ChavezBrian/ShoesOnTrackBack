@@ -3,7 +3,7 @@ const { conn } = require("./src/db.js");
 const { shoes, categories, user } = require("./src/controllers/saveInDB.js");
 const { Products } = require("./src/db.js");
 
-const { SERVER_PORT } = process.env;
+const SERVER_PORT = process.env.PORT || 3001;
 
 conn.sync({ force: false }).then(async () => {
   const products = await Products.findAll();
