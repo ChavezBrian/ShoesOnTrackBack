@@ -1,10 +1,9 @@
 const axios = require("axios");
 const sendEmail = require("../config/mailer.js");
-const {
-  PAYPAL_API,
-  PAYPAL_API_CLIENT,
-  PAYPAL_API_SECRET,
-} = require("../config/config.js");
+const PAYPAL_API = "https://api-m.sandbox.paypal.com";
+const PAYPAL_API_CLIENT = "AaHhTpPS12nRr6xYKtC1ON5uepgecESSzzVPZ-GF91aq-hIqPC-_Qs6csNxmCxl4-pI5SmPMZeB-aHV6";
+const PAYPAL_API_SECRET = "EAbiJOvD1WyHZ3kGeDdP3gKReovmZ_urdMRuMtDS2jF3dw1UYPmrTXkQIIyfGNzjd9dTzdvCsS0Agh8f";
+
 
 const createOrder = async (req, res) => {
   try {
