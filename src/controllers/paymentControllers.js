@@ -28,8 +28,8 @@ const createOrder = async (req, res) => {
       landing_page: "LOGIN",
       user_action: "PAY_NOW",
       shipping_preference: "NO_SHIPPING",
-      return_url: "https://deploy-back-wine.vercel.app/payment/capture-order",
-      cancel_url: "https://deploy-back-wine.vercel.app/payment/cancel-order",
+      return_url: "http://localhost:3001/payment/capture-order",
+      cancel_url: "http://localhost:3001/payment/cancel-order",
     },
   };
 
@@ -96,7 +96,7 @@ const captureOrder = async (req, res) => {
       console.log("Correo enviado: ", emailResult);
     }
 
-    return res.redirect("https://deploy-front-gamma.vercel.app/");
+    return res.redirect("http://localhost:3000/");
   } catch (error) {
     console.error(error);
     return res.status(500).send("Something goes wrong");
@@ -104,7 +104,7 @@ const captureOrder = async (req, res) => {
 };
 
 const cancelOrder = (req, res) => {
-  res.redirect("https://deploy-front-gamma.vercel.app/");
+  res.redirect("http://localhost:3000/");
 };
 
 module.exports = {
