@@ -95,7 +95,7 @@ const captureOrder = async (req, res) => {
       console.log("Correo enviado: ", emailResult);
     }
 
-    return res.redirect("https://deploy-front-gamma.vercel.app/");
+    return res.redirect("https://deploy-front-alpha.vercel.app/");
   } catch (error) {
     console.error(error);
     return res.status(500).send("Something goes wrong");
@@ -103,7 +103,7 @@ const captureOrder = async (req, res) => {
 };
 
 const cancelOrder = (req, res) => {
-  res.redirect("https://deploy-front-gamma.vercel.app/");
+  res.redirect("https://deploy-front-alpha.vercel.app/");
 };
 
 module.exports = {
