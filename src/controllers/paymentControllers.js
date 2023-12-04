@@ -86,7 +86,7 @@ const captureOrder = async (req, res) => {
     if (response.data.status === "COMPLETED") {
       //Enviaremos la notificacion del pago
       const emailResult = await sendEmail(
-        "sergiovelezhernandez11@gmail.com", // Cambia por la dirección de correo a la que deseas enviar la notificación
+        "tucorreo@gmail.com", // Cambia por la dirección de correo a la que deseas enviar la notificación
         "Notificación de Pago",
         "Has realizado con éxito la compra del siguiente ticket :"
       );
